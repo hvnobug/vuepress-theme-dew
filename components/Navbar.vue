@@ -5,7 +5,7 @@
         <router-link :to="$localePath" class="home-link">
             <img class="logo" :alt="$siteTitle"
                  v-if="$site.themeConfig.avatar || $site.themeConfig.logo"
-                 :src="$withBase($site.themeConfig.avatar || $site.themeConfig.logo)">
+                 :src="$site.themeConfig.avatar || $site.themeConfig.logo">
             <span ref="siteName" class="site-name" v-if="$siteTitle"
                   :class="{ 'can-hide': $site.themeConfig.avatar || $site.themeConfig.logo}">
                 {{ $siteTitle }}

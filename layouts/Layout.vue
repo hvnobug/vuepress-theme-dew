@@ -1,22 +1,26 @@
 <template>
     <div class="theme-container" :class="pageClasses" @touchstart="onTouchStart" @touchend="onTouchEnd">
-        <Navbar v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar"/>
-        <div class="sidebar-mask" @click="toggleSidebar(false)"></div>
-        <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
-            <slot name="sidebar-top" #top/>
-            <slot name="sidebar-bottom" #bottom/>
-        </Sidebar>
-        <div class="page-content animated
-         fadeInDown">
-            <transition enter-active-class="animated fadeInDown">
-                <Home v-if="$page.frontmatter.home"/>
-                <Page v-else :sidebar-items="sidebarItems">
-                    <slot name="page-top" #top/>
-                    <slot name="page-bottom" #bottom/>
-                </Page>
-            </transition>
+        <transition enter-active-class="animated fadeInDown" v-if="firstLoad">
+            <LoadingPage/>
+        </transition>
+        <div :class="{'hide': firstLoad}">
+            <Navbar v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar"/>
+            <div class="sidebar-mask" @click="toggleSidebar(false)"></div>
+            <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
+                <slot name="sidebar-top" #top/>
+                <slot name="sidebar-bottom" #bottom/>
+            </Sidebar>
+            <div class="page-content animated fadeInDown">
+                <transition enter-active-class="animated fadeInDown">
+                    <Home v-if="$page.frontmatter.home"/>
+                    <Page v-else :sidebar-items="sidebarItems">
+                        <slot name="page-top" #top/>
+                        <slot name="page-bottom" #bottom/>
+                    </Page>
+                </transition>
+            </div>
+            <Footer :class="`footer ${$page.frontmatter.home ? 'home' : 'page'}-footer`"/>
         </div>
-        <Footer :class="`footer ${$page.frontmatter.home ? 'home' : 'page'}-footer`"/>
     </div>
 </template>
 
@@ -27,6 +31,7 @@
     import Page from '@theme/components/Page.vue'
     import Sidebar from '@theme/components/Sidebar.vue'
     import PageContent from '@theme/components/PageContent.vue'
+    import LoadingPage from '@theme/components/LoadingPage.vue'
     import '../css/theme.css'
     import {
         resolveSidebarItems
@@ -34,11 +39,12 @@
     import DropdownTransition from "../components/DropdownTransition";
 
     export default {
-        components: {DropdownTransition, Home, Page, Sidebar, Navbar, Footer, PageContent},
+        components: {DropdownTransition, Home, Page, Sidebar, Navbar, Footer, PageContent, LoadingPage},
 
         data() {
             return {
-                isSidebarOpen: false
+                isSidebarOpen: false,
+                firstLoad: true
             }
         },
 
@@ -97,6 +103,7 @@
         },
 
         mounted() {
+            this.handleLoading();
             this.$router.afterEach(() => {
                 this.isSidebarOpen = false
             });
@@ -106,7 +113,6 @@
             script.onload = function () {
                 console.info("加载 iconfont")
             };
-
         },
 
         methods: {
@@ -133,6 +139,13 @@
                         this.toggleSidebar(false)
                     }
                 }
+            },
+            handleLoading() {
+                const time = this.$frontmatter.home && sessionStorage.getItem('firstLoad') == undefined ? 1000 : 0;
+                setTimeout(() => {
+                    this.firstLoad = false;
+                    if (sessionStorage.getItem('firstLoad') == undefined) sessionStorage.setItem('firstLoad', false);
+                }, time)
             }
         }
     }
@@ -143,7 +156,8 @@
         min-height 100vh
         flex-direction column
         justify-content space-between
-
+    .hide
+        display none
     @require "../styles/theme"
 </style>
 
