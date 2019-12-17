@@ -1,0 +1,72 @@
+{
+  "name": "vuepress-theme-dew",
+  "version": "1.2.0",
+  "description": "A simple vuepress theme.",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hvnobug/vuepress-theme-dew.git"
+  },
+  "keywords": [
+    "documentation",
+    "vue",
+    "vuepress",
+    "generator"
+  ],
+  "author": "Hvnobug",
+  "maintainers": [
+    {
+      "name": "Hvnobug",
+      "email": "972080809@qq.com"
+    }
+  ],
+  "scripts": {
+    "dev": "vuepress dev example/docs -p 7788 --host localhost",
+    "build": "vuepress build example/docs && gulp pdf",
+    "resume-start": "gulp clean && gulp dev",
+    "resume-pdf": "gulp pdf",
+    "resume-dev": "gulp dev"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hvnobug/vuepress-theme-dew/issues"
+  },
+  "homepage": "https://github.com/hvnobug/vuepress-theme-dew#readme",
+  "dependencies": {
+    "typed.js": "^2.0.11",
+    "vuepress-plugin-smooth-scroll": "^0.0.9",
+    "vuepress-plugin-table-of-contents": "^1.1.4",
+    "@goy/vuepress-plugin-svg-icons": "^4.0.0",
+    "@vuepress/plugin-active-header-links": "^1.2.0",
+    "@vuepress/plugin-back-to-top": "^1.2.0",
+    "@vuepress/plugin-nprogress": "^1.2.0",
+    "@vuepress/plugin-search": "^1.2.0",
+    "vuepress-plugin-container": "^2.0.2",
+    "vuepress-plugin-flowchart": "^1.4.3",
+    "vuepress-plugin-reading-progress": "^1.0.8",
+    "vuepress-plugin-zooming": "^1.1.7"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-sass": "^4.0.2",
+    "puppeteer": "^2.0.0",
+    "rimraf-promise": "^2.0.0",
+    "vue-tabs-component": "^1.5.0",
+    "vuepress": "^1.2.0",
+    "vuepress-plugin-social-share": "^0.1.1",
+    "vuepress-plugin-tabs": "^0.2.2",
+    "vuepress-plugin-code-copy": "^1.0.4",
+    "vuepress-plugin-code-switcher": "^1.0.3",
+    "vuepress-plugin-comment": "^0.7.2",
+    "vuepress-plugin-copyright": "^1.0.2",
+    "vuepress-plugin-global-toc": "^1.0.1",
+    "vuepress-plugin-img-lazy": "^1.0.1",
+    "vuepress-plugin-mathjax": "^1.2.8"
+  }
+}

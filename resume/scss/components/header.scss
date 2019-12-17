@@ -1,0 +1,101 @@
+header {
+  overflow: hidden;
+  padding: 30px 45px;
+  color: #fff;
+  background-color: #333;
+  @include media("<tablet") {
+    padding: 30px 10px;
+  }
+  @include media("print") {
+    padding: 20px 45px;
+  }
+}
+
+.qrcode {
+  float: left;
+  margin: 0;
+  @include media("<=desktop") {
+    display: none;
+  }
+  @include media("print") {
+    display: block;
+    margin-top: 5px;
+  }
+  img {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+.title {
+  float: right;
+  text-align: right;
+  @include media("<tablet") {
+    float: none;
+    text-align: center;
+    h2 {
+      padding: 0 6px;
+    }
+  }
+  @include media("print") {
+    float: right;
+    text-align: right;
+  }
+  h1 {
+    font-size: 72px;
+    line-height: 1;
+    margin: 5px 0;
+    padding: 5px 0;
+  }
+  h2 {
+    font-size: 20.8px;
+    font-weight: 400;
+    margin: 5px 0;
+    padding: 5px 6px;
+  }
+}
+
+address {
+  overflow-y: hidden;
+}
+
+.phone {
+  display: none;
+  @include media("print") {
+    display: block;
+  }
+}
+
+.wechat {
+  @include media("print") {
+    display: none;
+  }
+}
+
+.contacts {
+  font-size: 18px;
+  float: left;
+  padding-left: 16px;
+  @include media("<=desktop") {
+    margin-top: 5px;
+    li {
+      line-height: 1.6;
+    }
+  }
+  @include media("print") {
+    line-height: 1.4;
+    margin-top: 0;
+  }
+  li {
+    font-style: initial;
+    line-height: 1.4;
+  }
+  a {
+    transition: 0.3s ease-out;
+    text-decoration: none;
+    color: #fff;
+    &:hover {
+      color: #a3d3d1;
+    }
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "Author": "Hvnobug",
+  "Guide": [
+    "照着这里面的格式填写即可",
+    "PDF 会自动生成，文件名可以在 gulp.js 里改",
+    "PDF 的地址，将这个文件里pdf部分改为你的PDF文件名即可"
+  ],
+  "title": "Hvnobug - Java全栈",
+  "aside": [
+    {
+      "href": "/",
+      "content": "返回首页"
+    },
+    {
+      "href": "https://www.zhihu.com/people/hvnobug",
+      "content": "知乎"
+    },
+    {
+      "href": "https://blog.hvnobug.com/",
+      "content": "博客"
+    },
+    {
+      "href": "https://github.com/hvnobug/vuepress-theme-dew/",
+      "content": "源代码"
+    },
+    {
+      "href": "/pages/resume/pdf/resume.pdf",
+      "content": "PDF 下载"
+    }
+  ],
+  "header": {
+    "title": {
+      "name": "Hvnobug",
+      "job": "Java全栈工程师"
+    },
+    "contacts": {
+      "phone": "151****0010",
+      "mail": "972080809@qq.com",
+      "wechat": "hvnobug",
+      "wechatQrcode": "https://cdn.jsdelivr.net/gh/hvnobug/assets/common/wechat.jpg",
+      "github": {
+        "href": "https://github.com/hvnobug/",
+        "name": "hvnobug"
+      },
+      "blog": {
+        "href": "http://blog.hvnobug.com",
+        "name": "My Blog"
+      }
+    }
+  },
+  "education": {
+    "time": "2014-2018",
+    "name": "XX大学",
+    "major": "计算机科学与技术（本科）",
+    "honor": [
+      "2016.09-2017.06 xx项目 — `负责人`"
+    ]
+  },
+  "language": {
+    "cert": [
+      {
+        "name": "CET-4",
+        "grade": 502,
+        "fullmarks": 710
+      }
+    ],
+    "skills": [
+      "流畅阅读开发文档 "
+    ]
+  },
+  "experience": [
+    {
+      "title": {
+        "place": "**团队",
+        "time": "2019.07 - 至今"
+      },
+      "content": {
+        "position": "高级全栈工程师",
+        "tasks": [
+          "Java架构"
+        ]
+      }
+    }
+  ],
+  "skills": {
+    "flags": {
+      "name": "Web前端",
+      "skill": [
+        {
+          "name": "`HTML/CSS`",
+          "description": [
+            "能够编写语义化的 `HTML` ，熟悉 `CSS` 的使用",
+            "不借助框架，能编写`响应式/移动端网页`"
+          ]
+        },
+        {
+          "name": "`ECMAScript（JavaScript）`",
+          "description": [
+            "`熟练使用 ES6/7/Next 开发项目`，代码编写遵守规范",
+            "熟悉异步编程，`掌握常见的解决方案及原理`"
+          ]
+        },
+        {
+          "name": "Java",
+          "description": [
+            "熟练使用 `Spring Mybatis 等` ，完成各类需求",
+            "熟悉分布式,微服务架构"
+          ]
+        }
+      ]
+    },
+    "cloud": {
+      "name": "Web后端",
+      "skill": [
+        {
+          "name": "`Java`",
+          "description": [
+            "熟练使用 `SpringBoot + MongoDB` 完成各类应用",
+            "使用 `Junit` 编写单元测试"
+          ]
+        },
+        {
+          "name": "其它知识",
+          "description": [
+            "日常使用 `Docker` 完成项目的构建与部署",
+            "完成 `Nginx` 的配置，实现反向代理等功能"
+          ]
+        }
+      ]
+    },
+    "gears": {
+      "name": "其它",
+      "skill": [
+        {
+          "name": "`计算机基础`",
+          "description": [
+            "`对计算机与编程有极大热情，自学能力较强`",
+            "在校选课与 MOOC 自学计算机相关课程",
+            "`坚持写原创技术博客，月浏览量 3K`"
+          ]
+        },
+        {
+          "name": "工具使用",
+          "description": [
+            "`两年 Linux 使用经验`",
+            "熟练使用 Git & `GitFlow 并推广至团队`"
+          ]
+        }
+      ]
+    }
+  }
+}
