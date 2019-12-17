@@ -1,0 +1,170 @@
+@mixin iconfont {
+  font-family: 'iconfont' !important;
+  font-style: normal;
+  padding-right: 3px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: .2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+@mixin icon-big {
+  font-size: 24px;
+  line-height: 32px;
+  display: inline-block;
+  float: left;
+  width: 32px;
+  height: 32px;
+  padding: 6px;
+  text-align: center;
+  color: #fff;
+  border-radius: 50%;
+  background: #333;
+}
+
+@mixin icon-medium {
+  font-size: 20px;
+  line-height: 26px;
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  margin-top: -7px;
+  margin-left: 3px;
+  margin-left: -22px;
+  padding: 6px;
+  text-align: center;
+  color: #fff;
+  border-radius: 50%;
+  background: teal;
+}
+
+@mixin icon-small {
+  display: inline-block;
+  padding-right: 3px;
+  color: #333;
+}
+
+
+@font-face {
+  font-family: "iconfont";
+  src: url('iconfont.eot');
+  /* IE9*/
+  src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg#iconfont') format('svg');
+  /* iOS 4.1- */
+}
+
+.icon-weibo:before {
+  content: '\e600';
+  @include iconfont;
+}
+
+.icon-mail:before {
+  content: '\e602';
+  @include iconfont;
+}
+
+.icon-chat:before {
+  font-size: 26px;
+  content: '\e601';
+  @include iconfont;
+  @include icon-big;
+}
+
+.icon-star:before {
+  font-size: 20px;
+  padding-right: 3px;
+  content: '\e606';
+  @include iconfont;
+}
+
+.icon-wechat:before {
+  content: '\e601';
+  @include iconfont;
+}
+
+.icon-book:before {
+  content: '\e607';
+  @include iconfont;
+  @include icon-big;
+}
+
+.icon-gears:before {
+  content: '\e608';
+  @include iconfont;
+  @include icon-medium;
+}
+
+.icon-cloud:before {
+  font-size: 29px;
+  content: '\e609';
+  @include iconfont;
+  @include icon-medium;
+}
+
+.icon-gear:before {
+  content: '\e60a';
+  @include iconfont;
+  @include icon-small;
+}
+
+.icon-gear-big:before {
+  content: '\e60a';
+  @include iconfont;
+  @include icon-big;
+}
+
+.icon-rocket:before {
+  font-size: 26px;
+  content: '\e60b';
+  @include iconfont;
+  @include icon-big;
+}
+
+.icon-github:before {
+  content: '\e603';
+  @include iconfont;
+}
+
+.icon-blog:before {
+  content: '\e604';
+  @include iconfont;
+}
+
+.icon-bag:before {
+  font-size: 26px;
+  content: '\e60c';
+  @include iconfont;
+  @include icon-medium;
+}
+
+.icon-wrench:before {
+  font-size: 28px;
+  content: '\e60d';
+  @include iconfont;
+  @include icon-big;
+}
+
+.icon-flags:before {
+  content: '\e60f';
+  @include iconfont;
+  @include icon-medium;
+}
+
+.icon-hat:before {
+  content: '\e610';
+  @include iconfont;
+  @include icon-small;
+}
+
+.icon-trophy:before {
+  content: '\e60e';
+  @include iconfont;
+}
+
+.icon-phone:before {
+  content: '\e611';
+  @include iconfont;
+}

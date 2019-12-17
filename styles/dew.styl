@@ -1,0 +1,155 @@
+.go-to-top {
+  width 32px;
+  height 32px;
+  padding 5px;
+  box-shadow: 0 5px 25px 0 rgba(0, 0, 0, .2), 0 10px 30px -11px rgba(0, 0, 0, .6);
+  border-radius 50%;
+}
+
+.custom-block
+  &.block
+    text-shadow: 0 -1px darken($accentColor, 10%);
+    box-shadow: 0 3px 12px lighten($accentColor, 10%);
+    background: -webkit-gradient(linear, left top, right top, from(darken($accentColor, 10%)), to(lighten($accentColor, 10%)));
+    background: linear-gradient(90deg, darken($accentColor, 10%), lighten($accentColor, 10%));
+    padding: 1rem;
+    color: #eee;
+    font-weight: bold;
+    border-radius: 10px;
+    position relative;
+
+    {$contentClass} > &
+      code
+        background none
+        color #e0e0e0 !important;
+        text-shadow 0 0 2px #100c0f, 0 0 5px #dc078e33, 0 0 10px #fff3;
+
+    &::before
+      font-size: 1.2rem;
+      text-shadow: 0 -1px #3c67bd;
+      background: -webkit-gradient(linear, left bottom, left top, from(darken($accentColor, 10%)), to(lighten($accentColor, 10%)));
+      background: linear-gradient(0deg, darken($accentColor, 10%), lighten($accentColor, 10%));
+      content: 'i';
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      line-height: 24px;
+      top: -12px;
+      left: -12px;
+      text-align: center;
+      font-weight: 900;
+      border-radius: 50%;
+      box-shadow: 0 0 0 2.5px #eee;
+      color: #eee;
+
+.box-shadow
+  box-shadow: 0 3px 12px lighten($accentColor, 10%);
+
+{$contentClass}
+  a
+    text-shadow: 0 1px 2px darken($accentColor, 10%);
+    color: lighten($accentColor, 10%);
+
+.custom-block
+  &.block
+    text-shadow: 0 -1px darken($accentColor, 10%);
+    box-shadow: 0 3px 12px lighten($accentColor, 10%);
+    background: -webkit-gradient(linear, left top, right top, from(darken($accentColor, 10%)), to(lighten($accentColor, 10%)));
+    background: linear-gradient(90deg, darken($accentColor, 10%), lighten($accentColor, 10%));
+    padding: 1rem;
+    color: #eee;
+    font-weight: bold;
+    border-radius: 10px;
+    position relative;
+
+    code
+      background none
+      color #e0e0e0 !important;
+      text-shadow 0 0 2px #100c0f, 0 0 5px #dc078e33, 0 0 10px #fff3;
+
+    a
+      font-weight 700;
+      color #FFF333
+      text-decoration none;
+      text-shadow 0 0 2px #100c0f, 0 0 5px #dc078e33, 0 0 10px #fff3;
+
+    &:before
+      font-size: 1.2rem;
+      text-shadow: 0 -1px #3c67bd;
+      background: -webkit-gradient(linear, left bottom, left top, from(darken($accentColor, 10%)), to(lighten($accentColor, 10%)));
+      background: linear-gradient(0deg, darken($accentColor, 10%), lighten($accentColor, 10%));
+      content: 'i';
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      line-height: 24px;
+      top: -12px;
+      left: -12px;
+      text-align: center;
+      font-weight: 900;
+      border-radius: 50%;
+      box-shadow: 0 0 0 2.5px #eee;
+      color: #eee;
+
+h1, h2, h3, h4, h5, h6
+  &::hover {
+    cursor: pointer;
+    color: $accentColor;
+  }
+
+  &:hover:before {
+    width: 100%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: $borderColor;
+    left: 0;
+    bottom: -1px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, darken($accentColor, 10%)), color-stop(70%, lighten($accentColor, 10%)));
+    background: linear-gradient(darken($accentColor, 10%) 30%, lighten($accentColor, 10%) 70%);
+    box-shadow: 0 3px 3px rgba($accentColor, 0.4);
+    border-radius: 4px;
+    -webkit-transition: 2s;
+    transition: 2s;
+    z-index: 1;
+  }
+
+
+::-webkit-scrollbar
+  width 5px
+  height 5px
+
+
+::-webkit-scrollbar-thumb
+  border-radius 15px;
+  background linear-gradient(lighten($accentColor, 15%) 20%, lighten($accentColor, 10%) 80%);
+  box-shadow inset 2px 2px 2px hsla(0, 0%, 100%, .45), inset -2px -2px 2px lighten($accentColor, 15%);
+
+
+::-moz-selection
+  background $accentColor
+
+
+::selection
+  background $accentColor
+
+
+.vuepress-plugin-comment, #vuepress-plugin-comment
+  max-width $contentWidth
+  margin 0 auto
+  padding 2rem 2.5rem

@@ -1,0 +1,45 @@
+aside {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  @include media("print") {
+    display: none !important;
+  }
+  @include media("<tablet") {
+    position: relative;
+    top: 0;
+    right: auto;
+    display: table;
+    width: 100%;
+    transform: none;
+    ul {
+      display: table-row;
+    }
+    li {
+      display: table-cell;
+      text-align: center;
+      border-radius: 0 !important;
+    }
+    a {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+  li {
+    margin-top: 6px;
+    transition: 0.2s linear;
+    border-radius: 5px 0 0 5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    a {
+      display: inline-block;
+      width: 100%;
+      padding: 10px;
+      text-decoration: none;
+      color: #fff;
+    }
+    &:hover {
+      background-color: rgba(55, 55, 55, 0.8);
+    }
+  }
+}

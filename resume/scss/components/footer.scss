@@ -1,0 +1,16 @@
+footer {
+  margin: 15px 6px;
+  @include media("print") {
+    margin: 0;
+    display: none;
+    visibility: hidden;
+  }
+  a {
+    font-weight: 700;
+    text-decoration: none;
+    color: teal;
+  }
+  p {
+    text-align: center;
+  }
+}

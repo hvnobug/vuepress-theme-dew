@@ -1,0 +1,242 @@
+$black: #333;
+$white: #fff;
+
+@mixin content-after {
+  float: left;
+  width: 0;
+  height: 0;
+  margin-top: -23px;
+  margin-left: 15px;
+  content: "";
+  border: 8px solid $black;
+  border-radius: 100%;
+}
+
+section {
+  margin-bottom: 14px;
+  @include media("print") {
+    margin-bottom: 8px;
+  }
+}
+
+@include media("print") {
+  dl {
+    margin: 10px 0;
+  }
+  dd {
+    line-height: 1.2;
+    font-size: 14;
+  }
+}
+
+dd {
+  line-height: 1.42;
+}
+
+.column-6 {
+  @include media(">=desktop") {
+    float: left;
+    width: 50%;
+  }
+  @include media("<desktop") {
+    width: 100%;
+    padding-left: 0 !important;
+  }
+  @include media("print") {
+    float: left;
+    width: 50%;
+  }
+}
+
+.column {
+  padding-left: 15px;
+}
+
+.content {
+  overflow: hidden;
+  padding: 30px 45px;
+  // padding: 20px 20px;
+  background: $white;
+
+  @include media("<=phone") {
+    padding: 30px 10px;
+  }
+
+  @include media("print") {
+    padding: 12px 12px !important;
+  }
+}
+
+.sec-title-wrapper {
+  overflow-y: hidden;
+  .sec-title {
+    float: left;
+    margin: 0 0 0 10px;
+    padding: 0;
+  }
+  .sec-zh {
+    font-size: 20px;
+    font-weight: 700;
+    float: left;
+  }
+  .sec-en {
+    font-size: 16px;
+    font-weight: 700;
+    font-variant: small-caps;
+    float: left;
+    clear: left;
+    color: teal;
+  }
+}
+
+.sec-content {
+  margin-bottom: 22px;
+  margin-left: 20px;
+}
+
+.timeline-wrapper {
+  margin-top: -28px;
+  ul {
+    padding-top: 28px;
+    border-left: 5px solid $black;
+  }
+  .timeline-title {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.33;
+    margin-bottom: 0;
+    margin-left: 10px;
+    padding: 2px 0 2px 22px;
+    color: $white;
+    border-radius: 5px;
+    background: $black;
+
+    .skill {
+      color: #ffffff;
+      font-weight: normal;
+    }
+  }
+  &::after {
+    @include content-after;
+  }
+}
+
+.education {
+  .education-content {
+    margin: 0;
+  }
+  .education-name {
+    font-size: 32px;
+    margin: 6px 0 5px 26px;
+  }
+  dd {
+    margin-left: 27px;
+  }
+}
+
+.language {
+  .language-cert-type {
+    font-size: 20px;
+    font-weight: 700;
+    float: left;
+    padding-bottom: 3px;
+  }
+  .language-cert-wrapper {
+    display: flex;
+    overflow-y: hidden;
+    align-items: center;
+  }
+  .progress {
+    float: left;
+    width: 78%;
+    height: 25px;
+    margin-top: 1.8px;
+    margin-bottom: 5px;
+    margin-left: 26px;
+    border-radius: 4px;
+    background: $black;
+    @include media("<=phone") {
+      width: 75%;
+      margin-left: 10px;
+    }
+    @include media("print") {
+      width: 75%;
+      margin-left: 10px;
+    }
+    .progress-bar {
+      height: 100%;
+      border-radius: 4px;
+      background: teal;
+      .progress-label {
+        font-size: 19px;
+        float: right;
+        margin-right: 10px;
+        color: $white;
+      }
+    }
+  }
+  .language-skills {
+    li {
+      line-height: 1.4;
+      @include media("print") {
+        line-height: 1.2;
+      }
+    }
+  }
+}
+
+.experience {
+  overflow-y: hidden;
+  .experience-content {
+    margin: 0;
+  }
+  .experience-position {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 6px 0 5px 26px;
+  }
+  .experience-task {
+    font-size: 15px;
+    margin-left: 27px;
+    display: flex;
+    align-items: center;
+    @include media("print") {
+      font-size: 14px;
+    }
+  }
+  .experience-time {
+    @include media("print") {
+      font-size: 14px;
+    }
+    font-size: 15px;
+    float: right;
+    margin-right: 10px;
+  }
+  .experience-link {
+    display: inline-block;
+    float: right;
+    margin-right: 10px;
+    padding: 0 3px;
+    text-decoration: none;
+    color: $black;
+    border-radius: 5px;
+    background: $white;
+  }
+}
+
+.skills {
+  @include media("print") {
+    .skill-content {
+      margin: 0;
+    }
+  }
+  .skill-name {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 6px 0 5px 26px;
+  }
+  .skill-description {
+    font-size: 15px;
+    margin-left: 23px;
+  }
+}

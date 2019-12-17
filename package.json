@@ -1,0 +1,49 @@
+{
+  "name": "vuepress-theme-dew",
+  "version": "1.0.1",
+  "description": "A simple vuepress theme.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hvnobug/vuepress-theme-dew.git"
+  },
+  "keywords": [
+    "documentation",
+    "vue",
+    "vuepress",
+    "generator",
+    "theme",
+    "hvnobug"
+  ],
+  "author": "Hvnobug",
+  "maintainers": [
+    {
+      "name": "Hvnobug",
+      "email": "972080809@qq.com"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hvnobug/vuepress-theme-dew/issues"
+  },
+  "homepage": "https://github.com/hvnobug/vuepress-theme-dew#readme",
+  "dependencies": {
+    "vue-tabs-component": "^1.5.0",
+    "@goy/vuepress-plugin-svg-icons": "^4.0.0",
+    "@vuepress/plugin-active-header-links": "^1.2.0",
+    "@vuepress/plugin-back-to-top": "^1.2.0",
+    "@vuepress/plugin-nprogress": "^1.2.0",
+    "@vuepress/plugin-search": "^1.2.0",
+    "vuepress-plugin-container": "^2.0.2",
+    "vuepress-plugin-flowchart": "^1.4.3",
+    "vuepress-plugin-reading-progress": "^1.0.8",
+    "vuepress-plugin-social-share": "^0.1.1",
+    "vuepress-plugin-tabs": "^0.2.2",
+    "vuepress-plugin-zooming": "^1.1.7"
+  },
+  "devDependencies": {
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "vuepress": "^1.2.0"
+  }
+}
