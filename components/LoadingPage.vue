@@ -1,10 +1,10 @@
 <template>
     <div class="loading-container">
         <template v-if="$frontmatter.home">
-            <span class="loading-title">{{$site.title || $localeConfig.title || $site.themeConfig.title}}</span>
-            <p class="loading-description">{{$site.description || $localeConfig.description|| $site.themeConfig.description}}</p>
+            <span class="loading-title">{{$site.themeConfig.loadingPage.title || $site.title || $localeConfig.title || $site.themeConfig.title}}</span>
+            <p class="loading-description">{{$site.themeConfig.loadingPage.description || $site.description || $localeConfig.description|| $site.themeConfig.description}}</p>
         </template>
-        <img :src="$site.themeConfig.loadingImage || 'https://cdn.jsdelivr.net/gh/hvnobug/assets/home/images/loading.gif'" class="loading-img"/>
+        <img :src="$site.themeConfig.loadingPage.image || 'https://cdn.jsdelivr.net/gh/hvnobug/assets/home/images/loading.gif'" class="loading-img"/>
     </div>
 </template>
 <style lang="stylus">
