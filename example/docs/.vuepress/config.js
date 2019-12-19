@@ -20,70 +20,19 @@ module.exports = {
             hitokoto: true
         },
         sidebar: [
-
             {
-                title: '基础',   // 必要的
+                title: 'Demo',   // 必要的
                 collapsable: true, // 可选的, 默认值是 true,
                 sidebarDepth: 2,    // 可选的, 默认值是 1
                 children: [
-                    '/pages/theme-document/',
-                    '/pages/theme-document/basics/install.html',
-                    '/pages/theme-document/basics/quick-start.html'
+                    '/pages/demo/',
+                    '/pages/demo/demo.html',
                 ]
             },
-
-            {
-                title: '进阶',
-                collapsable: true,
-                sidebarDepth: 2,
-                children: [
-                    '/pages/theme-document/advanced/',
-                    '/pages/theme-document/advanced/sidebar.html',
-                    '/pages/theme-document/advanced/navbar.html',
-                    '/pages/theme-document/advanced/footer.html',
-                    '/pages/theme-document/advanced/typed.html',
-                    '/pages/theme-document/advanced/icon.html',
-                    '/pages/theme-document/advanced/404.html'
-                ]
-            },
-            {
-                title: '扩展',
-                collapsable: true,
-                sidebarDepth: 2,
-                children: [
-                    '/pages/theme-document/extension/markdown',
-                    '/pages/theme-document/extension/comment-plugin.html',
-
-                ]
-            },
-            {
-                title: '可选',
-                collapsable: true,
-                sidebarDepth: 2,
-                children: [
-                    '/pages/theme-document/optional/smooth-scroll.html',
-                    '/pages/theme-document/optional/copy-code.html',
-                    '/pages/theme-document/optional/lazy-img.html',
-                    '/pages/theme-document/optional/code-tab.html',
-                    '/pages/theme-document/optional/mathjax-render.html',
-                    '/pages/theme-document/optional/tocs.html',
-                    '/pages/theme-document/optional/copyright.html',
-                    '/pages/theme-document/optional/resume.html'
-                ]
-            }
         ],
         avatar: 'https://cdn.jsdelivr.net/gh/hvnobug/assets/common/avatar.png',  // 头像
         logo: 'https://cdn.jsdelivr.net/gh/hvnobug/assets/common/logo.png',      // Logo
         footer: {
-            Copyright: {
-                text: '豫ICP备18037410号-2',
-                icon: {
-                    name: 'beian',
-                },
-                link: {
-                    url: 'http://www.miitbeian.gov.cn/'
-                }
-            },
             Author: {
                 text: 'Hvnobug',
                 icon: {
@@ -106,19 +55,14 @@ module.exports = {
                 icon: 'about'
             },
             {
-                text: '主题文档',
+                text: 'Demo',
                 icon: 'document',
-                link: '/pages/theme-document/'
-            },
-            {
-                text: '博客',
-                link: 'https://blog.hvnobug.com/',
-                icon: 'blog'
+                link: '/pages/demo/'
             },
             {
                 text: '简历',
-                link: '/pages/resume/',
                 icon: 'resume',
+                link: '/pages/resume/', // 使用 yarn run resume-dev 或者 yarn run build 生成简历
                 route: false
             },
             {
