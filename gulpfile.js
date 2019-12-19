@@ -47,7 +47,7 @@ gulp.task('json2jade', () => {
     const info = JSON.parse(fs.readFileSync('./resume.json', 'utf-8'));
     const locals = highlight(info);
     gulp
-        .src('./resume/jade/index.jade')
+        .src(`${resumeDir}/jade/index.jade`)
         .pipe(
             jade({
                 locals
@@ -113,7 +113,6 @@ gulp.task('pdf', ['set-pdf-port', 'default', 'webserver'], async () => {
         height: 900
     });
     const resumeUrl = `http://localhost:9001${resumePath}index.html`;
-    console.info('resumeUrl',resumeUrl)
     await page.goto(resumeUrl);
     await delay(100);
 
