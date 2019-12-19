@@ -46,7 +46,7 @@
                             name: 'theme'
                         }
                     }
-                }, this.$site.themeConfig.footer);
+                }, this.$site.themeConfig.footer || {});
                 const footerKeys = Object.keys(footer);
                 return footerKeys.map(key => {
                     const item = footer[key];
@@ -76,10 +76,13 @@
     .footer
         text-align center
         padding 2rem 1rem;
+
         &.home-footer
             margin-left 0
+
         &.page-footer
             margin-left $sidebarWidth
+
         .github-badge
             display: inline-block
             border-radius: 4px
@@ -129,6 +132,6 @@
 
     @media (max-width: $MQMobile)
         .footer
-            padding  1rem 0.5rem !important
+            padding 1rem 0.5rem !important
             margin-left 0 !important
 </style>
