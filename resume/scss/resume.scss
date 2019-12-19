@@ -39,9 +39,7 @@ strong {
 }
 
 .container {
-  margin-top: 10px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 2rem auto;
   box-shadow: 2px 2px 5px;
 
   @include media(">=desktop") {

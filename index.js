@@ -30,7 +30,6 @@ module.exports = (options, ctx) => {
             'reading-progress',
             '@vuepress/back-to-top',
             '@vuepress/plugin-nprogress',
-            '@vuepress-reco/loading-page',
             [
                 '@vuepress/active-header-links',
                 options.activeHeaderLinks

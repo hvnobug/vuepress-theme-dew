@@ -6,6 +6,7 @@ aside {
   @include media("print") {
     display: none !important;
   }
+
   @include media("<tablet") {
     position: relative;
     top: 0;
