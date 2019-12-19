@@ -1,10 +1,17 @@
 <template>
     <div class="loading-container">
         <template v-if="$frontmatter.home">
+<<<<<<< HEAD
             <span class="loading-title">{{$site.themeConfig.loadingPage.title || $site.title || $localeConfig.title || $site.themeConfig.title}}</span>
             <p class="loading-description">{{$site.themeConfig.loadingPage.description || $site.description || $localeConfig.description|| $site.themeConfig.description}}</p>
         </template>
         <img :src="$site.themeConfig.loadingPage.image || 'https://cdn.jsdelivr.net/gh/hvnobug/assets/home/images/loading.gif'" class="loading-img"/>
+=======
+            <span class="loading-title">{{$site.title || $localeConfig.title || $site.themeConfig.title}}</span>
+            <p class="loading-description">{{$site.description || $localeConfig.description|| $site.themeConfig.description}}</p>
+        </template>
+        <img :src="$site.themeConfig.loadingImage || 'https://cdn.jsdelivr.net/gh/hvnobug/assets/home/images/loading.gif'" class="loading-img"/>
+>>>>>>> 1ef056bc6b552702d1c3bfb0c510b6a450bed67b
     </div>
 </template>
 <style lang="stylus">
@@ -40,4 +47,8 @@
         .loading-img
             max-width 80%
             height auto
+<<<<<<< HEAD
 </style>
+=======
+</style>
+>>>>>>> 1ef056bc6b552702d1c3bfb0c510b6a450bed67b
