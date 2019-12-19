@@ -11,7 +11,7 @@
     export default {
         computed: {
             loadingPage() {
-                Object.assign({
+                return Object.assign({
                     image: 'https://cdn.jsdelivr.net/gh/hvnobug/assets/home/images/loading.gif',
                     title: this.$site.title || this.$localeConfig.title || this.$site.themeConfig.title,
                     description: this.$site.description || this.$localeConfig.description || this.$site.themeConfig.description
