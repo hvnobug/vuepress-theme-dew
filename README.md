@@ -1,8 +1,10 @@
 ## vuepress-theme-dew
 
-🌈 A simple and beautiful vuepress theme,[preview](https://hvnobug.com/)
+> 🌈 A simple and beautiful vuepress theme,
 
-<p align="center">
+[preview](https://hvnobug.com/)
+
+<p>
     <a href="https://www.npmjs.com/package/vuepress-theme-onen">
       <img src="https://img.shields.io/npm/v/vuepress-theme-dew?color=red" alt="npm version">
     </a>
