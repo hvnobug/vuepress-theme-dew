@@ -5,10 +5,10 @@
 [preview](https://hvnobug.com/)
 
 <p>
-    <a href="https://www.npmjs.com/package/vuepress-theme-onen">
+    <a href="https://www.npmjs.com/package/vuepress-theme-dew">
       <img src="https://img.shields.io/npm/v/vuepress-theme-dew?color=red" alt="npm version">
     </a>
-    <a href="https://www.npmjs.com/package/vuepress-theme-onen">
+    <a href="https://www.npmjs.com/package/vuepress-theme-dew">
       <img src="https://img.shields.io/npm/dt/vuepress-theme-dew" alt="npm download">
     </a>
     <a href="https://github.com/hvnobug/vuepress-theme-dew/blob/master/LICENSE">
